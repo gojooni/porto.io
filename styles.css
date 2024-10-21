@@ -1,0 +1,522 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navbar Blur */
+.navbar {
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(234, 228, 228, 0.7);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #5cb85c;
+}
+
+/* Hero Section Styling */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    transition: background 0.3s ease; /* Transisi halus saat berganti mode */
+}
+
+
+ /*Gradient untuk mode terang */
+body.light-theme.hero {
+    background: linear-gradient(135deg, #93f7f7, #9950f9);
+}
+
+/* Gradient untuk mode gelap */
+body.dark-theme.hero {
+    background: linear-gradient(135deg, #222, #333);
+}
+
+/* Hero Content */
+.hero-content {
+    max-width: 600px;
+    color: #333; /* Warna teks untuk mode terang */
+}
+
+/* Dark Theme untuk Konten Hero */
+body.dark-theme .hero-content {
+    color: #f0f0f0; /* Warna teks untuk mode gelap */
+}
+
+/* Gambar Hero */
+.hero-image {
+    max-width: 500px;
+    border-radius: 7px;
+}
+
+/* Gaya tambahan untuk transisi */
+.hero h1 {
+    margin: 0 0 60px;
+    transition: color 0.3s ease; /* Transisi halus untuk judul */
+}
+
+/* Dark Theme untuk Judul Hero */
+body.dark-theme .hero h1 {
+    color: #fff; /* Warna judul untuk mode gelap */
+}
+
+
+/* Section Styling */
+.section {
+    padding: 50px;
+    text-align: center;
+}
+
+
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.project-card {
+    cursor: pointer; /* Menunjukkan bahwa kartu dapat diklik */
+    transition: transform 0.3s ease; /* Transisi untuk efek zoom */
+}
+
+.project-image {
+    width: 400%; /* Memastikan gambar mengisi seluruh lebar kartu */
+    height: auto; /* Tinggi otomatis untuk menjaga rasio aspek */
+    border-radius: 10px; /* Sudut membulat */
+    max-width: 400px; /* Atur lebar maksimum agar tidak terlalu besar */
+    transition: transform 0.3s ease; /* Transisi untuk efek zoom */
+}
+
+@media (max-width: 768px) {
+    .project-image {
+        max-width: 100%; /* Pada perangkat kecil, gambar mengisi penuh */
+    }
+}
+
+
+/* Ketika gambar dalam keadaan dibesarkan */
+.project-card.animate .project-image {
+    transform: scale(1.1); /* Besarkan gambar 10% */
+}
+
+
+/* Footer */
+.footer {  
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-category a {
+    color: #5cb85c;
+    text-decoration: none;
+}
+
+/* Default Light Theme */
+body {
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: background-color 0.3s ease;
+}
+
+body.dark-theme .navbar {
+    background-color: rgba(30, 30, 30, 0.7);
+}
+
+.nav-links a {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+body.dark-theme .nav-links a {
+    color: #f0f0f0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-theme footer {
+    background-color: #1e1e1e;
+}
+
+/* Button Styling */
+.theme-switcher {
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+body.dark-theme .theme-switcher {
+    color: #f0f0f0;
+}
+
+/* Default (Light Mode) */
+body {
+    background-color: #f0f0f0;
+    color: #333; /* Warna teks utama */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode */
+body.dark-theme {
+    background-color: #1e1e1e;
+    color: #f0f0f0; /* Ubah warna teks untuk mode gelap */
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: background-color 0.3s ease;
+}
+
+body.dark-theme .navbar {
+    background-color: rgba(30, 30, 30, 0.7);
+}
+
+/* Style for All Text Elements */
+h1, h2, h3, p, li, a {
+    transition: color 0.3s ease;
+}
+
+/* Text Color Adjustments for Dark Theme */
+body.dark-theme h1, 
+body.dark-theme h2, 
+body.dark-theme h3, 
+body.dark-theme p, 
+body.dark-theme li, 
+body.dark-theme a {
+    color: #f0f0f0;
+}
+
+/* Default (Light Mode) */
+.project-card {
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode */
+body.dark-theme .project-card {
+    background-color: #2c2c2c;
+    color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for Images in Cards */
+.project-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Styling for Contact Section */
+#contact {
+    padding: 50px;
+    margin: 20px 0;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Default (Light Mode) */
+body:not(.dark-theme) #contact {
+    background-color: #f9f9f9;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode */
+body.dark-theme #contact {
+    background-color: #2c2c2c;
+    color: #f0f0f0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Form Layout */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input Fields */
+form input, form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-color: #eaeaea;
+    color: #333;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    resize: none;
+}
+
+/* Dark Mode Input Fields */
+body.dark-theme form input, 
+body.dark-theme form textarea {
+    background-color: #3a3a3a;
+    color: #fff;
+}
+
+/* Focus Effect */
+form input:focus, form textarea:focus {
+    border-color: #5e72e4;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Button Styling */
+form button {
+    padding: 12px 20px;
+    background-color: #5e72e4;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+form button:hover {
+    background-color: #4b60c1;
+}
+
+/* Dark Mode Button */
+body.dark-theme form button {
+    background-color: #6a74e7;
+}
+
+body.dark-theme form button:hover {
+    background-color: #5b63c6;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    #contact {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+/* Project Section */
+#projects {
+    padding: 50px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Project Card Styling */
+.project-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f0f0f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Dark Theme for Card */
+body.dark-theme .project-card {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Card Hover Effect */
+.project-card:hover {
+    transform: scale(1.05); /* Membesar sedikit saat dihover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Image */
+.project-image {
+    width: 400px;
+    border-radius: 8px;
+}
+
+/* Project Description */
+.project-description {
+    flex: 1;
+}
+
+/* Active Animation (Saat Dipencet) */
+.active-card {
+    animation: press 0.4s ease forwards;
+}
+
+/* Keyframes untuk Animasi */
+@keyframes press {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); } /* Mengecil sedikit */
+    100% { transform: scale(1); } /* Kembali normal */
+}
+
+/* Section Styling */
+.section {
+    padding: 50px;
+    margin: 20px 0;
+    
+    border-radius: 12px;
+    background: linear-gradient(135deg, #eaeaea, #919191); /* Gradient untuk mode terang */
+    transition: background 0.3s ease; /* Transisi halus saat berganti mode */
+}
+
+/* Dark Theme Section Background Gradient */
+body.dark-theme .section {
+    background: linear-gradient(135deg, #333, #434343); /* Gradient untuk mode gelap */
+}
+
+/* Background Gradient untuk Mode Light */
+body {
+    background: linear-gradient(135deg, #e8e8e8, #cbcbcb); /* Gradient untuk mode terang */
+    transition: background 0.3s ease; /* Transisi halus saat berganti mode */
+}
+
+/* Gaya Umum */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s ease; /* Transisi halus saat berganti mode */
+}
+
+/* Gradient untuk mode terang */
+body.light-theme {
+    background: linear-gradient(135deg, #ffffff, #bebebe);
+}
+
+/* Gradient untuk mode gelap */
+body.dark-theme {
+    background: linear-gradient(135deg, #333, #444);
+}
+
+/* Gradient untuk Section About */
+#about {
+    background: linear-gradient(135deg, #dedede, #c3c2c2); /* Gradient untuk mode terang */
+    padding: 50px;
+    border-radius: 12px;
+    transition: background 0.3s ease; /* Transisi halus saat berganti mode */
+}
+
+/* Dark Theme untuk Section About */
+body.dark-theme #about {
+    background: linear-gradient(135deg, #444, #555); /* Gradient untuk mode gelap */
+}
+
+#projects {
+    background: linear-gradient(135deg, #e7e7e7, #a3a2a2); /* Gradient untuk mode terang */
+    padding: 50px;
+    text-align: center;
+    border-radius: 12px;
+    transition: background 0.3s ease; /* Transisi halus saat berganti mode */
+}
+
+/* Dark Theme untuk Section Projects */
+body.dark-theme #projects {
+    background: linear-gradient(135deg, #444, #585858); /* Gradient untuk mode gelap */
+}
+
+/* Project Card Styling */
+.project-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #e1e0e0, #bdbcbc);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Dark Theme for Card */
+body.dark-theme .project-card {
+    background: linear-gradient(135deg, #444, #585858);
+}
+
+/* Active Animation (Saat Dipencet) */
+.active-card {
+    animation: press 0.4s ease forwards;
+}
+
+@keyframes press {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+/* Gradient untuk Section Projects */
+html {
+    scroll-behavior: smooth; /* Mengaktifkan smooth scrolling di seluruh halaman */
+}
+
